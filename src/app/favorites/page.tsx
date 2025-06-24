@@ -1,7 +1,7 @@
 'use client';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import { FaHeart } from 'react-icons/fa';
 import type { MusicType } from '@/types';
 import {
     removeFromFavorites,
@@ -10,7 +10,8 @@ import {
 
 export default function Favorites() {
     const dispatch = useDispatch();
-    const favorites = useSelector((state: any) => state.favorites.items); // Correcting the use of state
+    // @ts-ignore
+    const favorites = useSelector((state: any) => state.favorites.items); 
 
     const handleRemoveFromFavorites = (trackId: number) => {
         dispatch(removeFromFavorites(trackId));

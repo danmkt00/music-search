@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useDispatch, UseDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import {
     addToFavorites,
     removeFromFavorites
